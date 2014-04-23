@@ -58,10 +58,10 @@ for i = 1:m
     X_tmp = X(1:i,:);
     y_tmp = y(1:i);
     theta_trian = trainLinearReg(X_tmp, y_tmp, lambda);
-    error_train(i)=linearRegCostFunction(X_tmp, y_tmp, theta_trian, 0);
+    error_train(i)=linearRegCostFunction(X_tmp, y_tmp, theta_trian, lambda);
     
 %     theta_val = trainLinearReg(Xval, yval, lambda);    
-    error_val(i)=linearRegCostFunction(Xval, yval, theta_trian, 0);
+    error_val(i)=linearRegCostFunction(Xval, yval, theta_trian, lambda);
     
 end
 
